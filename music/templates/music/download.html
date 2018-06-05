@@ -1,0 +1,17 @@
+
+
+
+<p>Your download is ready, click the button</p>
+
+<form action="/music/download/" method="post">
+    {% csrf_token %}
+    
+    <input id="submit" type="submit" value="Click" name="btn" />
+</form>
+
+<p>Download history:</p>
+
+{%for item in data%}
+        <li>{{item}}</li>
+    {% endfor %}
+
